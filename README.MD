@@ -53,6 +53,7 @@ The application is divided into a few simple components:
     - Fetches access tokens for the logged-in user
     - Relies on Spring Security for token handling
 
+//TODO (token to be store)
 - **TokenStore**
     - Stores tokens in Redis
     - Helps with expiry tracking and fast access
@@ -71,7 +72,7 @@ This separation makes the code easier to understand and extend.
 3. User authorizes the application
 4. Provider redirects back with authorization code
 5. Spring Security exchanges the code for access and refresh tokens
-6. Tokens are stored in Redis
+6. Tokens will be stored in Redis
 7. API calls are made using the access token
 8. If the token expires, Spring Security refreshes it automatically
 
@@ -81,7 +82,7 @@ The refresh logic is handled internally by Spring Security.
 
 ## Token Storage
 
-Tokens are stored in **Redis**.
+Tokens will be stored in **Redis**.
 
 Reason for using Redis:
 - Fast lookups

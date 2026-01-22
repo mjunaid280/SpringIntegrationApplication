@@ -1,0 +1,22 @@
+spring:
+  application:
+    name=oauth2:
+  oauth2:
+    registration:
+      name: "google"
+      url: "https://www.googleapis.com/oauth2/v3/userinfo"
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: "782485781237-2jqkv988ag5rt9rujq4b43tugg4pnb62.apps.googleusercontent.com"
+            client-secret: "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"
+            scope:
+                - openid
+                - profile
+                - email
+            provide:
+              google:
+                issuer-uri: https://accounts.google.com
+
